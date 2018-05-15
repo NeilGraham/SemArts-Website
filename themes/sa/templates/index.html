@@ -44,7 +44,12 @@
         font-family: 'Barlow', sans-serif;
       }
       .landing-page .box {
-        height: 100vh;
+        min-height: 375px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .landing-page .top {
         height: 100vh;
@@ -65,6 +70,7 @@
       }*/
       .landing-page h1 {
         margin: 0;
+        margin-bottom: 5vh;
         font-weight: 500;
       }
       .landing-page h2 {
@@ -73,7 +79,7 @@
       }
       .landing-page h3 {
         margin: 0;
-        /*margin-bottom: 45px;*/
+        margin-bottom: 5vh;
         font-weight: 400;
       }
       .landing-page h4 {
@@ -85,24 +91,20 @@
       }
 
 
-      @media screen and (min-width: 950px) {
+      @media screen and (min-width: 1051px) {
         .landing-page h1 {
           font-size: 6rem;
-          margin-bottom: 5vh;
+          
         }
         .landing-page h2 {
-          margin: 0;
           font-size: 2.5rem;
           font-weight: 500;
         }
         .landing-page h3 {
-          margin: 0;
-          margin-bottom: 5vh;
           font-size: 2rem;
           font-weight: 400;
         }
         .landing-page h4 {
-          margin: 0;
           font-size: 1.6rem;
           font-weight: 400;
         }
@@ -113,9 +115,21 @@
       }
 
 
-      @media screen and (min-width: 600px) and (max-width: 950px) {
+      @media screen and (min-width: 657px) and (max-width: 1051px) {
         .landing-page h1 {
-          font-size: 5rem;
+          font-size: 4.8rem;
+        }
+        .landing-page h2 {
+          font-size: 2.3rem;
+          font-weight: 500;
+        }
+        .landing-page h3 {
+          font-size: 1.9rem;
+          font-weight: 400;
+        }
+        .landing-page h4 {
+          font-size: 1.5rem;
+          font-weight: 400;
         }
         .landing-page .top .text {
           margin-left: 10vw;
@@ -124,9 +138,21 @@
 
       }
 
-      @media screen and (min-width: 420px) and (max-width: 600px) {
+      @media screen and (min-width: 468px) and (max-width: 657px) {
         .landing-page h1 {
           font-size: 4rem;
+        }
+        .landing-page h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+        .landing-page h3 {
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+        .landing-page h4 {
+          font-size: 1.4rem;
+          font-weight: 400;
         }
         .landing-page .top .text {
           margin-left: 5vw;
@@ -135,15 +161,49 @@
 
       }
 
-      @media screen and (min-width: 300px) and (max-width: 420px) {
+      @media screen and (min-width: 343px) and (max-width: 468px) {
         .landing-page h1 {
           font-size: 3rem;
         }
+        .landing-page h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+        .landing-page h3 {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+        .landing-page h4 {
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
         .landing-page .top .text {
-          margin-left: 20px;
-          margin-right: 20px;
+          margin-left: 4vw;
+          margin-right: 4vw;
         }
 
+      }
+
+      @media screen and (max-width: 343px) {
+        .landing-page h1 {
+          font-size: 2rem;
+        }
+        .landing-page h2 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        .landing-page h3 {
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+        .landing-page h4 {
+          font-size: 0.6rem;
+          font-weight: 400;
+        }
+        .landing-page .top .text {
+          margin-left: 3vw;
+          margin-right: 3vw;
+        }
       }
 
       {% endblock content_css %}
