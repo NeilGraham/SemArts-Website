@@ -1,0 +1,9 @@
+
+
+{% macro image(image) %}
+"@type" : ImageObject"
+{% if image.url    is defined %}      , "url"    : "{{ image.url    | safe }}"{% endif %}
+{% if image.width  is defined %}      , "width"  : "{{ image.width  | safe }}"{% endif %}
+{% if image.height is defined %}      , "height" : "{{ image.height | safe }}"{% endif %}
+{% endmacro footer %}
+

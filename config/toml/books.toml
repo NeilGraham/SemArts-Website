@@ -1,0 +1,33 @@
+[[extra.books]]
+	url = "software-wasteland"
+	title = "Software Wasteland"
+  subtitle = "How the Application-Centric Mindset is Hobbling our Enterprises"
+	description = ""
+	date = 2018-01-31
+	img_id = "software-wasteland.png"
+	author_id = "dave_mccomb"
+	datestr = "Jan. 31st, 2018"
+  amazon_url = "https://www.amazon.com/Software-Wasteland-Application-Centric-Hobbling-Enterprises-ebook/dp/B079KJ8VNL"
+	safari_url = "https://www.safaribooksonline.com/library/view/software-wasteland-how/9781634623186/"
+	has_shadow = ""
+
+[[extra.books]]
+	url = "business-systems"
+	title = "Semantics in Business Systems"
+  subtitle = "The Savvy Manager's Guide"
+	description = ""
+	date = 2018-01-31
+	img_id = "business-systems.jpg"
+	author_id = "dave_mccomb"
+	datestr = "Sept. 24th, 2003"
+  amazon_url = "https://www.amazon.com/Semantics-Business-Systems-Managers-Guides/dp/1558609172"
+	has_shadow = ""
+
+[[extra.books]]
+	url = "demystifying-owl"
+	title = "Demystifying OWL"
+  subtitle = "for the Enterprise"
+	description = ""
+	img_id = "demystifying-owl.png"
+	author_id = "michael_uschold"
+	datestr = "Coming Soon"

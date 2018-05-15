@@ -1,0 +1,21 @@
+name = "sa"
+description = "Semantic Arts Theme"
+license = ""
+homepage = "https://semanticarts.com"
+min_version = "0.1"
+
+#[extra]
+#hyde_sticky = true
+#hyde_reverse = false
+#hyde_theme = ""
+#hyde_links = [
+#]
+
+[author]
+name = "Neil Graham"
+homepage = ""
+
+[original]
+author =  ""
+homepage = ""
+repo = ""

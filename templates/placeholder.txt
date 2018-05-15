@@ -1,0 +1,2 @@
+This is a placeholder file to ensure Git creates the templates directory as it is required by Gutenberg
+

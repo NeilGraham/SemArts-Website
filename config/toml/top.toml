@@ -1,0 +1,19 @@
+title = "Semantic Arts"
+description = "The authoratative source for resource computing information."
+theme = "sa"
+#base_url = "http://test.www.semanticarts.com"
+base_url = "http://localhost:1111"
+#generate_categories_pages = false
+#generate_tags_pages = true
+#generate_rss = true
+#highlight_code = true
+#compile_sass = true
+
+[extra]
+  author = 'Randolph Stuart Kahle, Neil Graham'
+  sa_theme = ''
+
+[extra.img]
+  url = "http://aaa"
+  width = 200
+  height = 200

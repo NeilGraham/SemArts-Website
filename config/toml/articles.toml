@@ -1,0 +1,67 @@
+
+[[extra.subjects]]
+  id = 'ontology'
+  name = 'Semantics and Ontology'
+  color = '#1A1A1A'
+
+[[extra.subjects]]
+  id = 'development'
+  name = 'Development'
+  color = '#1A1A1A'
+
+[[extra.subjects]]
+  id = 'architecture'
+  name = 'Software Architecture'
+  color = '#1A1A1A'
+
+
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/AvoidingPropertyProliferation012717.pdf"
+	title = "Avoiding Property Proliferation"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "Domain and range for ontological properties are not about data integrity, but logical necessity. Misusing them leads to an inelegant (and unnecessary) proliferation of properties."
+	date = 2017-01-27
+	author_id = "dan_carey"
+	datestr = "Jan. 27th, 2017"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/QuantumEntanglementInverseProps041516MFUnewtemplate.pdf"
+	title = "Quantum Entanglement, Flipping Out and Inverse Properties"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "We take a deep dive into the pragmatic issues regarding the use of inverse properties when creating OWL ontologies."
+	date = 2016-04-15
+	author_id = "michael_uschold"
+	datestr = "Apr. 4th, 2016"
+
+[[extra.articles]]
+	url = "binary-instances"
+	title = "Binary Instances"
+  type = "Post"
+  subject_id = "ontology"
+	description = "Sometimes when we’re designing ontologies we’re faced with design choices that would lead us to create what we call \"binary instances\" or a situation where it will take the instantiation of two instances (often of different classes) in order to capture one concept."
+	date = 2015-07-17
+	author_id = "dave_mccomb"
+	datestr = "July 17th, 2015"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/HowLongShouldYourURIsBeDMc060815newtemplate.pdf"
+	title = "How long should your URIs be?"
+  type = "Whitepaper"
+  subject_id = "development"
+	description = "This applies to URIs that a system needs to generate when it finds it needs to mint a new resource"
+	date = 2015-06-08
+	author_id = "dave_mccomb"
+	datestr = "June 8th, 2015"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/CategoriesandClassesDMc060515newtemplate.pdf"
+	title = "Categories and Classes"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "Getting the category/class distinction right is one of the key drivers of the cost of traditional systems."
+	date = 2015-06-05
+	author_id = "dave_mccomb"
+	datestr = "June 5th, 2015"

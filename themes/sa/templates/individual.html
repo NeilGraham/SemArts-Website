@@ -1,0 +1,292 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+    {# Uses Futura as well (Should be linked in fonts macro) #}
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+
+<div class="individual">
+  {% set pid = page.extra.person_id %}
+  {% for person in config.extra.person %}
+    {% if person.id == pid %}
+  <div class="profile">
+    {#----------------#}
+    <div class="p-header">
+
+      {% if person.url is defined %}
+      <div class="img">
+        <a target="_blank" href='/images/team/{{person.url}}.jpg'>
+          <amp-img src="/images/team/{{person.url}}.jpg" style='border: 2px solid #1a1a1a;' height=180px width=180px></amp-img>
+        </a>
+      </div>
+      {% else %}
+      <div class="img">
+        <a href=''>
+          <amp-img src="/images/team/default.jpg" style='border-radius: 50%;  border: 1.5px solid #474747;' height=100px width=100px></amp-img>
+        </a>
+      </div>
+      {% endif %}
+      <a href=''>
+        <div class="title">
+          <h1 class="name">{{ person.name }}</h1>
+          <h2 class="position">{{ person.position }}</h2>
+        </div>
+      </a>
+      <div class="links">
+        {% if person.github_url is defined %}
+        <a title='GitHub' target="_blank" href="{{ person.github_url }}">
+          <amp-img src="/images/github.svg" style="vertical-align:center" height=43.75px width=43.75px></amp-img>
+        </a>
+        {% endif %}
+        {% if person.linkedin_url is defined %}
+        <a title='LinkedIn' target="_blank" href="{{ person.linkedin_url }}">
+          <amp-img src="/images/linkedin.svg" style="vertical-align:center" height=40px width=40px></amp-img>
+        </a>
+        {% endif %}
+        {% if person.resume_url is defined %}
+        <a title='Resume' target="_blank" href="{{ person.resume_url }}">
+          <amp-img src="/images/resume.svg" style="vertical-align:bottom" height=50px width=36.5px></amp-img>
+        </a>
+        {% endif %}
+      </div>
+
+    </div>
+{#-----------------------------#}
+    <div class="bio">
+      {{ page.content | safe }}
+    </div>
+{#-----------------------------#}
+    {% set created_title = 'false' %}
+    <div class="blog">
+      {% for blog in config.extra.blog %}
+        {% if blog.author_id == person.id %}
+          {% if created_title == 'false' %}
+            {% set created_title = 'true' %}
+            <div class="title">
+              <h1>Blog Posts</h1>
+            </div>
+          {% endif %}
+          <div class="box">
+            <a href="{{ config.base_url }}/blog/{{ blog.url }}">
+              <div class="header">
+                <h1>{{ blog.title }}</h1>
+              </div>
+            </a>
+              <div class = "author-info">
+                 <div class = "info-box">
+                  <a href="{{ config.base_url }}/team/{{ person.url }}" style="text-decoration: none">
+                    <h2 class="readtime left-piece">{{ blog.readtime }} minute read</h2>
+                    <h2 class="date-published right-piece">{{ blog.datestr }}</h2>
+                  </a>
+                </div> {# -- END info-box #}
+              </div> {# -- END author-info #}
+              <div class="description">
+                <p>{{ blog.description }}</p>
+              </div>
+          </div> {# -- END box #}
+        {% endif %}
+      {% endfor %}
+    </div>
+    {#----------------#}
+  </div> {# -- END PROFILE CLASS #}
+    {% endif %}
+  {% endfor %}
+</div> {# -- END TEAM CLASS #}
+
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+
+
+a:hover, a:active, a:visited, a:focus, a:link { color: #282828; text-decoration: none; }
+
+.blog .title {
+  text-align: center;
+}
+.blog .title h1 {
+  padding: 30px 0 30px 0;
+  font-family: 'Lato';
+  font-size: 44px;
+  margin: 0;
+  color: #282828;
+}
+
+.blog .box .description {
+  padding: 24px;
+  background-color: #F7F7F7;
+}
+.blog .box .description p {
+  margin: 0 15px 0 15px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.blog .box {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.author-info {
+  width: 100%;
+  border-bottom: 1px solid #DBDBDB;
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: #EFEFEF;
+}
+.author-info .info-box {
+  overflow: hidden;
+  display: inline-block;
+}
+.info-box .date-published, .info-box .name, .info-box .readtime {
+  float: left;
+  margin: 2px 0 0 8px;
+  font-size: 15px;
+  line-height: normal;
+  vertical-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.info-box .left-piece, .info-box .middle-piece {
+  margin: 0;
+  padding-right: 15px;
+}
+.info-box .right-piece, .info-box .middle-piece {
+  margin: 0;
+  padding-left: 15px;
+  border-left: 1px solid #DBDBDB;
+}
+
+
+
+
+  .box .header h1 {
+    text-align: center;
+    /* Only for this instance */
+    margin: 24px 20px 18px 20px;
+    line-height: 36px;
+    /*                        */
+  }
+
+  .blog {
+    margin-bottom: 85px;
+  }
+
+  .box {
+    overflow: hidden;
+    width: 520px;
+    border: 1px solid #d6d6d6;
+    /* background-color: #f4f4f4; */
+    margin: auto;
+    margin-bottom: 60px;
+  }
+  .box .header {
+    overflow: hidden;
+    background-color: #EFEFEF;
+    /* border-bottom: 1.4px solid #41BAE7; */
+  }
+  .box .header .title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display: inline;
+    margin-top: 12px;
+    float: left;
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+
+a {
+  text-decoration: none;
+}
+
+.links a {
+  margin-left: 12px;
+}
+
+.team {
+  margin-bottom: 85px;
+}
+
+.body {
+  padding: 30px;
+}
+.body p {
+  width: 500px;
+  margin: auto;
+  font-family: 'Catamaran', sans-serif, light;
+  font-size: 14px;
+  color: #282828;
+  text-align: justify;
+}
+
+
+  .profile {
+    overflow: hidden;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .profile .p-header {
+    overflow: hidden;
+    padding-bottom: 12px;
+  }
+  .profile .p-header .title {
+    display: inline;
+    margin-top: 12px;
+    float: left;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .profile .p-header .title .name {
+    margin: 18px 0 0 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #282828;
+  }
+  .profile .p-header .title .position {
+    margin: -8px 0 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #282828;
+  }
+  .profile .p-header .img {
+    float: left;
+    margin: 9px 18px 7px 27px;
+  }
+
+  .links {
+    float: right;
+    margin-top: 34px;
+    margin-right: 30px;
+  }
+  .links a {
+    margin-left: 15px;
+  }
+
+  .bio {
+    padding: 40px 40px 55px 40px;
+  }
+  .bio p {
+    width: 650px;
+    margin: 0 35px 25px 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #282828;
+    text-align: justify;
+  }
+{% endblock content_css %}

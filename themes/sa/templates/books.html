@@ -1,0 +1,283 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+    {# Uses Futura as well (Should be linked in fonts macro) #}
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+
+<div class="books">
+  <div class="text">
+    <div class="title">
+      <h1>{{ page.title }}</h1>
+    </div>
+    {#
+    <div class="text-content">
+      {{ page.content | safe }}
+    </div>
+    #}
+  </div>
+  {% for book in config.extra.books %} {# -- 1st for #}
+  <div class="box {{ book.url }}">
+    <div class="left">
+      <div class="picture {% if book.has_shadow is defined %}shadow{% endif %}">
+        {% if book.img_id is defined %}
+        <img max-width=100% height=240px src="/images/books/{{ book.img_id }}" />
+        {% endif %}
+      </div>
+      <div class="info">
+        <h1>{{ book.title }}</h1>
+        {% if book.subtitle is defined %}
+        <h2>{{ book.subtitle }}</h2>
+        {% endif %}
+        {% for author in config.extra.person %}
+        {% if author.id == book.author_id %}
+        <h3>by <a href="{{ config.base_url }}/team/{{ author.url }}"}>{{ author.name }}</a></h3>
+        {% endif %}{% endfor %}
+        {% if book.date is defined %}
+        <h4>Released {{ book.datestr }}</h4>
+        {% else %}
+        <h4>{{ book.datestr }}</h4>
+        {% endif %}
+      </div>
+    </div>
+    <div class="right">
+      {% if book.amazon_url is defined %}
+      <div class="button-wrapper">
+        <a target="_blank" href="{{ book.amazon_url }}">
+          <div class="button">
+            <img width=108px max-height=100% style="margin-top: 6px;" src="/images/companies/amazon.svg">
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% if book.safari_url is defined %}
+      <div class="button-wrapper">
+        <a target="_blank" href="{{ book.safari_url }}">
+          <div class="button">
+            <img width=116px max-height=100% src="/images/companies/safari.png">
+          </div>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </div> {# -- END box #}
+  <hr>
+  {% endfor %} {# -- 1st for #}
+</div> {# -- END books #}
+
+
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+
+  a:hover, a:active, a:visited, a:focus, a:link { color: #282828; text-decoration: none; }
+
+  .box .left .info h3 a:hover {
+    border-bottom: 1px solid #383838;
+  }
+
+  hr {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    border: .5px solid #DBDBDB;
+
+  }
+
+  .button {
+    width: 136px;
+    height: 60px;
+  }
+
+  .button-wrapper {
+    background-color: #F4F4F4;
+    border: 1px solid #D6D6D6;
+  }
+
+  .right .button-wrapper:hover {
+    background-color: #EDEDED;
+  }
+  .right .button-wrapper:active {
+    background-color: #E5E5E5;
+  }
+
+  .demystifying-owl .left .info h2 {
+    font-size: 30px;
+  }
+
+  .books .box {
+    font-family: 'Open Sans', sans-serif;
+    color: #282828;
+    width: 850px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .box .left {
+    overflow: hidden;
+    float: left;
+  }
+
+  .box .left .info {
+    float: left;
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 22px;
+  }
+  .left .info h1 {
+    width: 400px;
+    line-height: 40px;
+    font-size: 42px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 12px;
+    /* border-bottom: 1px solid #DBDBDB; */
+  }
+  .left .info h2 {
+    width: 400px;
+    line-height: 28px;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+  .left .info h3, .left .info h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .left .info h3 {
+    margin-bottom: 4px;
+  }
+  .left .info h4 {
+    font-size: 16px;
+  }
+
+  .box .left .picture {
+    float: left;
+    display: inline-block;
+  }
+  .box .left .shadow img {
+    box-shadow: 0 0 8px #B2B2B2;
+    margin: 8px 8px 8px 8px;
+  }
+
+  .box .right {
+    float: right;
+    text-align: center;
+  }
+  .right .button-wrapper {
+    margin-top: 24px;
+
+  }
+  .right .button-wrapper:first-child {
+    margin-top: 50px;
+  }
+
+
+
+  .author-info {
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #EFEFEF;
+  }
+  .author-info .info-box {
+    overflow: hidden;
+    display: inline-block;
+  }
+  .info-box .date-published, .info-box .name, .info-box .readtime {
+    float: left;
+    margin: 2px 0 0 8px;
+    font-size: 15px;
+    line-height: normal;
+    vertical-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  .info-box .left-piece, .info-box .middle-piece {
+    margin: 0;
+    padding-right: 15px;
+  }
+  .info-box .right-piece, .info-box .middle-piece {
+    margin: 0;
+    padding-left: 15px;
+    border-left: 1px solid #DBDBDB;
+  }
+
+
+  .box .header h1 {
+    text-align: center;
+    /* Only for this instance */
+    margin: 24px 20px 18px 20px;
+    line-height: 36px;
+    /*                        */
+  }
+
+  .books {
+    margin-bottom: 85px;
+  }
+
+
+
+
+  .text {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .text-content {
+    padding: 40px 40px 55px 40px;
+  }
+  .text .title {
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    /* border-bottom: 1px solid #DBDBDB; */
+  }
+  .text .title h1 {
+    font-family: 'Lato';
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+    color: #282828;
+  }
+  .text p {
+    font-size: 17px;
+    font-family: 'Catamaran', sans-serif, light;
+    margin: 0 35px 25px 35px;
+    color: #282828;
+    text-align: justify;
+  }
+  .text p:last-child {
+    margin-bottom: 0;
+  }
+  .text h2 {
+    text-align: left;
+    margin: 50px 25px 20px 25px;
+    font-size: 28px;
+    font-family: 'Catamaran';
+    line-height: 38px;
+    color: #282828;
+  }
+  .text h2:first-child {
+    margin-top: 0;
+  }
+
+
+
+{% endblock content_css %}

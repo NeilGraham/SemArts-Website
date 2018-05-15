@@ -1,0 +1,450 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+    {# Uses Futura as well (Should be linked in fonts macro) #}
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+
+<div class="services">
+
+  <div class="title">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  <div class="individual">
+    <div class="box">
+
+      <div class="top">
+        <h1>Data-Centric Transformation</h1>
+      </div>
+
+      <div class="bottom">
+        <h1>Many companies today have taken the approach to solving individual issues with the adoption of newer software solutions.</h1>
+        <h2>With this approach, large networks of data are grown in incompatible formats to one another. We refer to these incompatible networks as data silos.</h2>
+        <h2>We will convert your data silos to a single, consistent format, capable of scaling your business exponentially.</h2>
+        <div class="button">
+          <h2>Visualization</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-content">
+    {{ page.content | safe }}
+  </div>
+
+  <div class="dbbo">
+    <div class="box">
+
+      <div class="top">
+        <a href="https://semanticarts.com/dbbo/">
+        <div class="abbrev">
+          <h1>DBBO</h1>
+          <div class="event">
+            <h2>SUMMER</h2>
+            <h3>2018</h3>
+          </div>
+        </div>
+        <div class="expansion">
+          <h2>Designing & Building</h2>
+          <h3>Business Ontologies</h3>
+        </div>
+        </a>
+      </div>
+
+      <div class="bottom">
+        <div class="details">
+          <div class="date">
+            <h2>June 25<sup>th</sup> - June 28<sup>th</sup></h2>
+          </div>
+          <div class="address">
+            <h2>400 South 4th St., Suite 401,</h2>
+            <h3>Minneapolis, MN, 55415, US</h3>
+          </div>
+        </div>
+        <div class="outer">
+          <a target="_blank" href="https://semanticarts.com/dbbo-registration/">
+            <div class="button">
+              <h1>Register</h1>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> {# -- END SERVICES CLASS #}
+
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+
+/* IND. SERVICE BOX */
+  .individual .box {
+    font-family: 'Barlow', sans-serif;
+    width: 700px;
+    border: 1px solid #DBDBDB;
+    background-color: #F7F7F7;
+    color: #282828;
+    margin: auto;
+  }
+
+  /* - TOP - */
+    .individual .box .top {
+      border-bottom: 1px solid #DBDBDB;
+      margin-left: 30px;
+      margin-right: 30px;
+      padding-left: 16px;
+    }
+    .individual  .top h1 {
+      font-weight: 500;
+      font-size: 36px;
+      font-weight: 400px;
+      margin-bottom: 12px;
+    }
+
+  /* - BOTTOM - */
+    .individual .box .bottom {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .individual  .bottom h1 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .individual  .bottom h2 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .individual  .button-wrapper {
+      display: inline-block;
+      width: 80px;
+      height 50px;
+      border: 1px solid #DBDBDB;
+      text-align: center;
+    }
+    .individual  .button-wrapper .button h2 {
+      margin: 0;
+    }
+/* END IND. SERVICE BOX */
+
+{#
+<div class="individual">
+  <div class="box">
+    <div class="top">
+      <h1>Data-Centric Transformation</h1>
+    </div>
+    <div class="bottom">
+      <h1>Many companies today have taken the approach to solving individual issues with the adoption of newer software solutions.</h1>
+      <p>With this approach, large networks of data are grown in incompatible formats to one another. We refer to these incompatible networks as data silos.</p>
+      <p>We will convert your data silos to a single, consistent format, capable of scaling your business exponentially.</p>
+      <div class="button">
+        <h2>Visualization</h2>
+      </div>
+    </div>
+  </div>
+</div>
+#}
+
+.content {
+  margin-bottom: 120px;
+}
+
+.services .title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 30px 45px 30px 45px;
+  border-bottom: 1px solid #DBDBDB;
+}
+.services .title h1 {
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 50px;
+  margin: 0;
+  color: #282828;
+}
+
+/* DBBO BOX */
+  .dbbo .box {
+    font-family: avenir;
+    font-weight: 500;
+    width: 500px;
+    border: 1.6px solid #c9c9c9;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    margin: auto;
+  }
+
+  /* - TOP - */
+    .dbbo .box .top {
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* -- ABBREV -- */
+      .dbbo  .top .abbrev {
+        float: left;
+        padding-left: 30px;
+        padding-right: 34px;
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+      .dbbo  .top .abbrev h1 {
+        float: left;
+        font-size: 46px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 8px;
+
+      }
+      .dbbo  .top .abbrev .event {
+        float: right;
+        margin-top: 10px;
+      }
+      .dbbo  .abbrev .event h2 {
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: -10px;
+      }
+      .dbbo  .abbrev .event h3 {
+        font-size: 26px;
+        margin: 0;
+      }
+
+
+    /* -- EXPANSION -- */
+      .dbbo  .top .expansion {
+        float: right;
+        font-size: 12px;
+        padding-right: 30px;
+        padding-left: 34px;
+        margin-top: 30px;
+        border-left: 1px solid #c9c9c9;
+      }
+      .dbbo  .top .expansion h2, .dbbo  .top .expansion h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .dbbo  .top .expansion h3 {
+        margin-top: -8px;
+        text-align: center;
+      }
+
+
+  /* - BOTTOM - */
+    .dbbo .box .bottom {
+      display: inline-block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* -- DETAILS -- */
+      .dbbo  .bottom .details {
+        float: left;
+        margin-left: 48px;
+        margin-bottom: 30px;
+      }
+      .dbbo  .details .date h2, .details .address h2, .details .address h3 {
+        text-align: center;
+        font-weight: 400;
+        margin: 0;
+        font-size: 14px;
+      }
+      .dbbo  .bottom .details .date h2 {
+        font-size: 18px;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .dbbo  .bottom .details .date {
+
+      }
+      .dbbo  .bottom .details .address {
+        margin-top: 6px;
+      }
+
+
+    /* -- BUTTON -- */
+      .dbbo  .bottom .outer {
+        width: 150px;
+        height: 54px;
+        float: right;
+        margin-top: 10px;
+        margin-right: 46px;
+        background-color: #eaeaea;
+        border: 2px solid #cecece;
+      }
+      .dbbo  .bottom .outer:hover {
+        background-color: #E5E5E5;
+      }
+      .dbbo  .bottom .outer:active {
+        background-color: #DDDDDD;
+      }
+      .dbbo  .bottom .outer .button {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+      }
+      .dbbo  .button h1 {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+/* END DBBO BOX */
+
+a:hover, a:active, a:visited, a:focus { text-decoration: none; color: #282828;}
+
+.text-content h1, .text-content h2, .text-content h3 {
+  font-weight: 500;
+  font-size: 54px;
+  margin-top: 60px;
+  margin-bottom: 34px;
+}
+.text-content h4, .text-content h5, .text-content h6 {
+  font-weight: 500;
+  font-size: 38px;
+  margin-top: 50px;
+  margin-bottom: 28px;
+}
+.text-content h1 {
+  text-align: left;
+  margin-left: 90px
+}
+.text-content h2 {
+  text-align: right;
+  margin-right: 90px;
+}
+.text-content h4 {
+  text-align: left;
+  margin-left: 70px
+}
+.text-content h5 {
+  text-align: right;
+  margin-right: 70px;
+}
+.text-content h3, .text-content h6 {
+  text-align: center;
+}
+
+.services .text-content i:parent:parent {
+  text-align: center;
+  margin: auto;
+  font-style: normal;
+}
+
+.text-content {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: #282828;
+  padding: 0;
+}
+
+.text-content hr {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.services {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.services .title {
+  text-align: center;
+  padding: 30px 45px 30px 45px;
+  border-bottom: 1px solid #DBDBDB;
+}
+.services p {
+  font-size: 19px;
+  margin: 0 50px 25px 50px;
+  text-align: justify;
+  line-height: 24px;
+}
+.services p:last-child {
+  margin-bottom: 0;
+}
+.services b {
+  line-height: 18px;
+}
+
+.services .text-content ul, .services .text-content ol {
+  font-size: 17px;
+  margin: 0 66px 25px 40px;
+  padding-left: 32px;
+  color: #282828;
+  text-align: justify;
+}
+.services .text-content li {
+  margin-top: 24px;
+}
+
+.services img {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 40px 40px 40px 40px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .services {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  .text-content {
+    padding: 30px 20px 32px 20px;
+  }
+  .services .title {
+    padding: 24px 35px 24px 35px;
+  }
+  .services .title h1 {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .services {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  .text-content {
+    padding: 20px 0 20px 0;
+  }
+  .services .title {
+    padding: 16px 20px 16px 20px;
+  }
+  .services .title h1 {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .services .title h1 {
+    font-size: 32px;
+  }
+  .services p {
+    font-size: 15px;
+  }
+}
+
+{% endblock content_css %}

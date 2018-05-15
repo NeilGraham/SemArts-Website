@@ -1,0 +1,155 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+  <div class="attention">
+    <div class="text-content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+      a:hover, a:active, a:visited, a:focus { text-decoration: none; color: #282828;}
+
+      .text-content h1, .text-content h2, .text-content h3 {
+        font-weight: 500;
+        font-size: 54px;
+        margin-top: 60px;
+        margin-bottom: 34px;
+      }
+      .text-content h1 {
+        text-align: left;
+        margin-left: 90px
+      }
+      .text-content h2 {
+        text-align: right;
+        margin-right: 90px;
+      }
+      .text-content h3 {
+        text-align: center;
+      }
+      .text-content h4 {
+        margin-left: 64px;
+        font-size: 20px;
+      }
+
+      .attention .text-content i:parent:parent {
+        text-align: center;
+        margin: auto;
+        font-style: normal;
+      }
+
+      .text-content {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: #282828;
+      }
+
+      hr {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 0;
+        border-bottom: 1px solid #dbdbdb;
+      }
+
+      .attention {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
+      .text-content {
+        padding: 0 0 55px 0;
+      }
+      .attention .title {
+        text-align: center;
+        padding: 30px 45px 30px 45px;
+        border-bottom: 1px solid #DBDBDB;
+      }
+      .attention p {
+        font-size: 19px;
+        margin: 0 50px 25px 50px;
+        text-align: justify;
+        line-height: 24px;
+      }
+      .attention p:last-child {
+        margin-bottom: 0;
+      }
+      .attention b {
+        line-height: 18px;
+      }
+
+      .attention .text-content ul, .attention .text-content ol {
+        font-size: 17px;
+        margin: 0 66px 25px 40px;
+        padding-left: 32px;
+        color: #282828;
+        text-align: justify;
+      }
+      .attention .text-content li {
+        margin-top: 24px;
+      }
+
+      .attention img {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin: 40px 40px 40px 40px;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 900px) {
+        .attention {
+          margin-left: 90px;
+          margin-right: 90px;
+        }
+        .text-content {
+          padding: 30px 20px 32px 20px;
+        }
+        .attention .title {
+          padding: 24px 35px 24px 35px;
+        }
+        .attention .title h1 {
+          font-size: 46px;
+        }
+      }
+
+      @media only screen and (max-width: 680px) {
+        .attention {
+          margin-left: 70px;
+          margin-right: 70px;
+        }
+        .text-content {
+          padding: 20px 0 20px 0;
+        }
+        .attention .title {
+          padding: 16px 20px 16px 20px;
+        }
+        .attention .title h1 {
+          font-size: 38px;
+        }
+      }
+
+      @media only screen and (max-width: 460px) {
+        .attention .title h1 {
+          font-size: 32px;
+        }
+        .attention p {
+          font-size: 15px;
+        }
+      }
+
+{% endblock content_css %}

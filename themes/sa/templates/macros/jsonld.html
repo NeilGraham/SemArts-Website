@@ -1,0 +1,28 @@
+
+{#
+<!--
+    WebPage from schema.org
+    Input:
+      .context - global context
+
+  -->
+{{- $context   := .context }}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org"
+      ,"@type"  : "WebPage"
+      ,"url"    : "{{ $context.Permalink }}"
+    }
+  </script>
+
+#}
+
+{% macro webpage(url) %}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org"
+      ,"@type"  : "WebPage"
+      ,"url"    : "{{ url }}"
+    }
+  </script>
+{% endmacro webpage %}

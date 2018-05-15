@@ -1,0 +1,6 @@
+public/
+.idea
+.DS_Store
+themes/hyde
+themes/even
+config/backup

@@ -1,0 +1,105 @@
+[[extra.companies]]
+  name = "Investment Bank"
+  id = "investment-bank"
+  image_url = "investmentbank.svg"
+
+[[extra.companies]]
+  name = "Procter & Gamble"
+  id = "procter-gamble"
+  image_url = "p&g.svg"
+  title_url = "p&g-title.png"
+
+[[extra.companies]]
+  name = "Financial Service's Back Office Outstanding Firm"
+  id = "fs-back-office-of"
+  image_url = "fsboof.png"
+
+[[extra.companies]]
+  name = "Washington State Secretary of State"
+  id = "ws-sos"
+  image_url = "ws-sos.png"
+
+[[extra.companies]]
+  name = "Washington State Department of Labor & Industries"
+  id = "ws-doli"
+  image_url = "ws-doli.png"
+
+[[extra.companies]]
+  name = "Sentara Healthcare"
+  id = "sentara-healthcare"
+  image_url = "sentara.svg"
+
+[[extra.companies]]
+  name = "Carlei Wines"
+  id = "carlei-wines"
+  image_url = "carlei.png"
+
+[[extra.companies]]
+  name = "LexisNexis"
+  id = "lexisnexis"
+  image_url = "lexisnexis.png"
+
+[[extra.companies]]
+  name = "Washington State Office of Financial Management"
+  id = "ws-ofm"
+  image_url = "ws-ofm.png"
+
+[[extra.companies]]
+  name = "Teacher Retirement System of Texas"
+  id = "trs-texas"
+  image_url = "trs.png"
+
+[[extra.companies]]
+  name = "Sallie Mae"
+  id = "sallie-mae"
+  image_url = "salliemae.svg"
+
+[[extra.companies]]
+  name = "Colorado Child Support Enforcement"
+  id = "co-cse"
+  image_url = "co-cse.svg"
+
+[[extra.companies]]
+  name = "Stone River"
+  id = "stone-river"
+  image_url = "stoneriver.svg"
+
+[[extra.companies]]
+  name = "Washington State Employment Security Division"
+  id = "ws-esd"
+  image_url = "ws-esd.svg"
+
+[[extra.companies]]
+  name = "Washington State Department of Transportation"
+  id = "ws-dot"
+  image_url = "ws-dot.svg"
+
+[[extra.companies]]
+  name = "CIA"
+  id = "cia"
+  image_url = "cia.svg"
+
+[[extra.companies]]
+  name = "International Surface Preparation Corporation"
+  id = "int-surface-prep"
+  image_url = "isp.svg"
+
+[[extra.companies]]
+  name = "Harvard Pilgrim Health Care"
+  id = "harvard-pilgrim-hc"
+  image_url = "harvardpilgrim.png"
+
+[[extra.companies]]
+  name = "Freddie Mac"
+  id = "freddie-mac"
+  image_url = "freddiemac.svg"
+
+[[extra.companies]]
+  name = "Commerce One"
+  id = "commerce-one"
+  image_url = "commerceone.svg"
+
+[[extra.companies]]
+  name = "Imerys Filtration"
+  id = "imerys-filtration"
+  image_url = "imerys.png"

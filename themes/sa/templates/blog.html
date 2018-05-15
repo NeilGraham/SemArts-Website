@@ -1,0 +1,280 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+    {# Uses Futura as well (Should be linked in fonts macro) #}
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+
+<div class="blog">
+  <div class="text">
+    <div class="title">
+      <h1>{{ page.title }}</h1>
+    </div>
+    {% for blog in config.extra.blog %}
+    <div class="individual">
+      <div class="box">
+        <div class="top">
+          <div class="left">
+            <h1>{{ blog.title }}</h1>
+            <h2>{{ blog.readtime }} min read</h2>
+          </div>
+          <div class="right">
+            {% for author in config.extra.person %}
+            {% if author.id == blog.author_id %}
+            <h3>{{ author.name }}</h3>
+            {% endif %} {% endfor %}
+            <h4>{{ blog.datestr }}</h4>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>{{ blog.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+</div> {# -- END blog #}
+
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+
+  a:hover, a:active, a:visited, a:focus, a:link { color: #282828; text-decoration: none; }
+
+  .individual .box {
+    width: 540px;
+    border: 1px solid #B5B5B5;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #282828;
+    background-color: #F7F7F7;
+    border-radius: 12px;
+  }
+  .box .top {
+    overflow: auto;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: inline-block;
+    border-bottom: 1px solid #B5B5B5;
+    border-radius: 12px 12px 0 0;
+  }
+  .box .top .left {
+    float: left;
+    width: 370px;
+    margin-left: 24px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  .top .left h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 8px;
+    margin: 0;
+  }
+  .top .left h2 {
+    line-height: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 1px;
+  }
+  .box .top .right {
+    float: right;
+  }
+  .top .right h3, .top .right h4 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+
+
+  .text {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .text-content {
+    padding: 40px 40px 55px 40px;
+  }
+  .text .title {
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #DBDBDB;
+  }
+  .text .title h1 {
+    font-family: 'Lato';
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+    color: #282828;
+  }
+  .text p {
+    font-size: 17px;
+    font-family: 'Catamaran', sans-serif, light;
+    margin: 0 35px 25px 35px;
+    color: #282828;
+    text-align: justify;
+  }
+  .text p:last-child {
+    margin-bottom: 0;
+  }
+  .text h2 {
+    text-align: left;
+    margin: 50px 25px 20px 25px;
+    font-size: 28px;
+    font-family: 'Catamaran';
+    line-height: 38px;
+    color: #282828;
+  }
+  .text h2:first-child {
+    margin-top: 0;
+  }
+
+
+
+{% endblock content_css %}
+
+
+{#
+
+{% for blog in config.extra.blog %}
+<div class="box">
+  <a href="{{ blog.url }}">
+    <div class="header">
+      <h1>{{ blog.title }}</h1>
+    </div>
+  </a>
+  {% if blog.author_id is defined %}
+  {% for person in config.extra.person %}
+    {% if blog.author_id == person.id %}
+    <div class = "author-info">
+       <div class = "info-box">
+        <a href="{{ config.base_url }}/team/{{ person.url }}" style="text-decoration: none">
+          <h1 class="name left-piece">{{ person.name }}</h1>
+          <h2 class="readtime middle-piece">{{ blog.readtime }} min read</h2>
+          <h2 class="date-published right-piece">{{ blog.datestr }}</h2>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+    <div class="description">
+      <p>{{ blog.description }}</p>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+{% block content_css %}
+
+  a:hover, a:active, a:visited, a:focus, a:link { color: #282828; text-decoration: none; }
+
+  .blog .box .description {
+    padding: 24px;
+    background-color: #F7F7F7;
+  }
+  .blog .box .description p {
+    margin: 0 15px 0 15px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .blog .box {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+
+  .author-info {
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #EFEFEF;
+  }
+  .author-info .info-box {
+    overflow: hidden;
+    display: inline-block;
+  }
+  .info-box .date-published, .info-box .name, .info-box .readtime {
+    float: left;
+    margin: 2px 0 0 8px;
+    font-size: 15px;
+    line-height: normal;
+    vertical-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  .info-box .left-piece, .info-box .middle-piece {
+    margin: 0;
+    padding-right: 15px;
+  }
+  .info-box .right-piece, .info-box .middle-piece {
+    margin: 0;
+    padding-left: 15px;
+    border-left: 1px solid #DBDBDB;
+  }
+
+
+  .box .header h1 {
+    text-align: center;
+    /* Only for this instance */
+    margin: 24px 20px 18px 20px;
+    line-height: 36px;
+    /*                        */
+  }
+
+  .blog {
+    margin-bottom: 85px;
+  }
+
+  .box {
+    overflow: hidden;
+    width: 520px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    /* background-color: #f4f4f4; */
+    margin: auto;
+    margin-bottom: 60px;
+  }
+  .box .header {
+    overflow: hidden;
+    background-color: #EFEFEF;
+    /* border-bottom: 1.4px solid #41BAE7; */
+  }
+  .box .header .title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display: inline;
+    margin-top: 12px;
+    float: left;
+    display:inline-block;
+    vertical-align: middle;
+  }
+
+
+{% endblock content_css %}
+
+#}

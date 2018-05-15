@@ -1,0 +1,45 @@
+[[extra.blog]]
+	url = "tale-of-two-projects"
+	title = "A Tale of Two Projects"
+	description = "A Tale of Two Projects, excerpt from \"Software Wasteland: How the Application-Centric Mindset is Hobbling Our Enterprises\""
+	date = 2018-02-28
+	author_id = "dave_mccomb"
+	datestr = "Feb. 28th, 2018"
+	readtime = "4"
+
+[[extra.blog]]
+	url = "software-wasteland"
+	title = "Software Wasteland"
+	description = "Overview of Dave McComb's book, \"Software Wasteland: How the Application-Centric Mindset is Hobbling Our Enterprises\""
+	date = 2018-02-22
+	author_id = "dave_mccomb"
+	datestr = "Feb. 22nd, 2018"
+	readtime = "0.5"
+
+[[extra.blog]]
+	url = "ontology-based-applications"
+	title = "Ontology-Based Applications"
+	description = "Excerpt from Michael Uschold's upcoming book, \"Demystifying OWL for the Enterprise\""
+	date = 2017-12-27
+	author_id = "michael_uschold"
+	datestr = "Nov. 27th, 2017"
+	readtime = "3.5"
+
+[[extra.blog]]
+	url = "semantic-silos"
+	title = "Enterprise Ontology, Semantic Silos, and Cowpaths"
+	description = "Use an enterprise ontology to avoid the trap of paving over your siloed information systems with semantic technology"
+	date = 2017-07-12
+	author_id = "michael_uschold"
+	datestr = "July 12th, 2017"
+	readtime = "3.5"
+
+[[extra.blog]]
+	url = "semantic-bank"
+	title = "A Semantic Bank"
+	description = "Our take on what it would mean to be a \"Semantic Bank\"."
+	date = 2017-05-25
+	author_id = "dave_mccomb"
+	datestr = "May 25th, 2017"
+	readtime = "8"
+

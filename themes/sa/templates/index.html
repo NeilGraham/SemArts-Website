@@ -1,0 +1,324 @@
+{% import "macros/amp.html"     as amp    %}
+{% import "macros/website.html" as web    %}
+{% import "macros/rdf.html"     as rdf    %}
+{% import "macros/jsonld.html"  as jsonld %}
+{% import "macros/fonts.html"   as fonts  %}
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>Semantic Arts</title>
+    {% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500" rel="stylesheet">
+    {% endblock content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link rel="canonical" href="./regular-html-version.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    {% if page.permalink is defined %}{{ jsonld::webpage(url = page.permalink) }}{% endif %}
+
+    {{ jsonld::webpage(url = "http://asdf") }}
+
+    <style amp-custom="">
+    /* -------- CSS STARTS HERE -------- */
+
+      /* For always keeping the footer at the bottom of the page */
+
+      html {
+        background-color: #FAFAFA;
+      }
+
+      /* Default sidebar state */
+      .amp-sidebar-toolbar-target-shown {
+        display: none;
+      }
+
+      {% block content_css %}
+
+      .landing-page {
+        text-align: center;
+        color: #282828;
+        font-family: 'Barlow', sans-serif;
+      }
+      .landing-page .box {
+        height: 100vh;
+      }
+      .landing-page .top {
+        height: 100vh;
+        min-height: 375px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .landing-page .top .text {
+        /*min-height: calc(100vh - 50px - 32vh + 30px);  -- 50px height of footer */
+        /*padding-top: 20vh;*/
+        text-align: left;
+      }
+      /*.landing-page .top .text h4 {
+        margin-bottom: 80px;
+      }*/
+      .landing-page h1 {
+        margin: 0;
+        font-weight: 500;
+      }
+      .landing-page h2 {
+        margin: 0;
+        font-weight: 500;
+      }
+      .landing-page h3 {
+        margin: 0;
+        /*margin-bottom: 45px;*/
+        font-weight: 400;
+      }
+      .landing-page h4 {
+        margin: 0;
+        font-weight: 400;
+      }
+      .right {
+        background-color: #F4F4F4;
+      }
+      
+
+      @media screen and (min-width: 950px) {
+        .landing-page h1 {
+          font-size: 6rem;
+        }
+        .landing-page h2 {
+          margin: 0;
+          font-size: 4rem;
+          font-weight: 500;
+        }
+        .landing-page h3 {
+          margin: 0;
+          /*margin-bottom: 45px;*/
+          font-size: 3rem;
+          font-weight: 400;
+        }
+        .landing-page h4 {
+          margin: 0;
+          font-size: 2rem;
+          font-weight: 400;
+        }
+        .landing-page .top .text {
+          margin-left: 20vw;
+          margin-right: 20vw;
+        }
+      }
+
+
+      @media screen and (min-width: 600px) and (max-width: 950px) {
+        .landing-page h1 {
+          font-size: 5rem;
+        }
+        .landing-page .top .text {
+          margin-left: 10vw;
+          margin-right: 10vw;
+        }
+
+      }
+
+      @media screen and (min-width: 420px) and (max-width: 600px) {
+        .landing-page h1 {
+          font-size: 4rem;
+        }
+        .landing-page .top .text {
+          margin-left: 5vw;
+          margin-right: 5vw;
+        }
+
+      }
+
+      @media screen and (min-width: 300px) and (max-width: 420px) {
+        .landing-page h1 {
+          font-size: 3rem;
+        }
+        .landing-page .top .text {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+      }
+
+      {% endblock content_css %}
+
+      {{ web::navbar_css() }}
+      {{ web::footer_css() }}
+
+      /* -- AMP CSS -- */
+      {% block ampcss    %}
+      {% endblock ampcss %}
+
+    /* -------- CSS ENDS HERE -------- */
+    </style>
+
+    <script type="application/ld+json">
+    {
+    {% block jsonld %}
+      "@context":  "http://schema.org",
+      "@type":     "NewsArticle",
+      "headline":  "Article headline",
+      "image": [
+        "thumbnail1.jpg"
+      ],
+      "datePublished": "2015-02-05T08:00:00+08:00"
+      {% endblock jsonld %}
+    }
+    </script>
+    {{ amp::sidebar()     }}
+    {{ amp::carousel()    }}
+    {{ amp::boilerplate() }}
+    {{ amp::project()     }}
+  </head>
+  <body class="{{ config.extra.sa_theme }}">
+    {#  OFFLOAD NAVBAR TO MACROS ATTEMPT
+    {% set base = config.base_url %}
+    {{ web::navbar_html( base ) }}
+     --------------------------------- #}
+
+    {% if page.extra.parent is defined %}
+      {% set select = page.extra.parent %}
+    {% else %}
+      {% set select = '' %}
+    {% endif %}
+
+    {# ++ Navigation bar fixed to the top of the web page #}
+    <div class="navbar">
+      <div class="navcontent">
+        {# -- Home Page / Company Name #}
+        <a class="navhome" href='{{ config.base_url }}'>semantic arts</a>
+        <div class="wide-view">
+          {# -- Gist Page #}
+          <div {% if select == "gist" %} class='select' {% endif %}>
+            <a href="{{ config.base_url }}/gist">Gist</a>
+          </div>
+          {# -- Reading Content Dropdown #}
+          <div class="dropdown {%if select == "read"%}select{%endif%}">
+            <a href='{{ config.base_url }}/blog' class="dropbtn">Read
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="{{ config.base_url }}/blog">Blog</a>
+              <a href="{{ config.base_url }}/articles">Articles</a>
+              <a href="{{ config.base_url }}/books">Books</a>
+            </div>
+          </div>
+          {# -- Team Page #}
+          <div {%if select == "team"%}class='select'{%endif%}>
+            <a href="{{ config.base_url }}/team">Team</a>
+          </div>
+          {# -- Clients Page #}
+          <div {%if select == "clients"%}class='select'{%endif%}>
+            <a href="{{ config.base_url }}/clients">Clients</a>
+          </div>
+          {# -- Services Dropdown #}
+          <div class="dropdown {%if select == "services"%}select{%endif%}">
+            <a href='{{ config.base_url }}/services' class="dropbtn">Services
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="{{ config.base_url }}/services/agile-enterprise-ontology">Agile Enterprise Ontology</a>
+              <a href="{{ config.base_url }}/services/data-centric-transformation">Data Centric Transformation</a>
+              <a href="{{ config.base_url }}/services/entree-projects">Entree Projects</a>
+              <a href="{{ config.base_url }}/services/transforms-projects">Transforms Projects</a>
+              <a href="{{ config.base_url }}/services/retainer-projects">Retainer Projects</a>
+              <a href="{{ config.base_url }}/services/everything-else">Everything Else</a>
+            </div>
+          </div>
+          {# -- About Page #}
+          <div {%if select == "about"%}class='select'{%endif%}>
+            <a href="{{ config.base_url }}/about">About</a>
+          </div>
+
+
+        </div>
+        <div class="thin-view">
+          <a on="tap:sidebar.toggle" class="ampstart-btn caps m2">+</a>
+        </div>
+      </div>
+    </div>
+
+    {# ++ Sidebar for smaller screens #}
+    <amp-sidebar id="sidebar"
+      layout="nodisplay"
+      side="right">
+      <amp-img class="amp-close-image"
+        src="/img/ic_close_black_18dp_2x.png"
+        width="20"
+        height="20"
+        alt="close sidebar"
+        on="tap:sidebar.close"
+        role="button"
+        tabindex="0"></amp-img>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li> Nav item 1</li>
+        <li>
+          <amp-fit-text width="220"
+            height="20"
+            layout="responsive"
+            max-font-size="24">
+            Nav item 2 - &lt;amp-fit-text&gt;
+          </amp-fit-text>
+        </li>
+        <li>
+          <amp-fit-text width="220"
+            height="20"
+            layout="responsive"
+            max-font-size="24">
+            Nav item 3 - &lt;amp-fit-text&gt; longer text
+          </amp-fit-text>
+        </li>
+        <li> Nav item 4 - Image
+          <amp-img class="amp-sidebar-image"
+            src="/img/favicon.png"
+            width="20"
+            height="20"
+            alt="an image"></amp-img>
+        </li>
+        <li> Nav item 5</li>
+        <li> Nav item 6</li>
+      </ul>
+    </amp-sidebar>
+
+
+    <div class="content">
+
+      {# Fills content area underneath starting navbar position #}
+      <!--<div style="height:47px; display:inline-block;"></div>-->
+
+      {% block content %}
+      <div class="landing-page">
+        <div class="top left">
+          <div class="text">
+            <h1>Own Your Data.</h1>
+            <h3>
+              The accumulation of third party applications has crippled industries.
+            </h3>
+            <h4>
+              Incompatible and overlapping software solutions have led many
+              companies down a path where they are not able to scale to their
+              developing interests and problems.
+            </h4>
+          </div>
+        </div>
+        <div class="box right">
+          <div class="text">
+            <h2>DATA-CENTRIC TRANSFORMATION</h1>
+            <h3>
+              A single database for storing and utilizing all of your data.
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      {% endblock content %}
+
+    </div> {# -- End tag to class content #}
+    {{ web::footer_html() }}
+
+  </body>
+</html>

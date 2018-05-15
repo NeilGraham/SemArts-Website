@@ -1,0 +1,203 @@
+{% extends "index.html" %}
+
+
+{# ---------------- FONTS ---------------- #}
+{% block content_fonts %}
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato" rel="stylesheet">
+{% endblock content_fonts %}
+
+
+{# ---------------- HTML ----------------- #}
+{% block content %}
+  <div class="clients">
+    <div class="text-content">
+      <h3>Past clients</h3>
+    </div>
+    <div class="companies">
+      {% for company in config.extra.companies %}
+      <div class="individual">
+        <a href="{{ company.id }}" title="{{ company.name }}">
+          <img src="/images/companies/{{ company.image_url }}" height=80px min-width=100% />
+        </a>
+        <div style='visibility: hidden;' class="description">
+          <h1>{{ company.name }}</h1>
+          {% if company.project is defined %}
+            <ul>
+            {% for project in company.project %}
+              <li>{{ project }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+{% endblock content %}
+
+
+{# ----------------- CSS ----------------- #}
+{% block content_css %}
+
+  .companies .individual .description {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #1a1a1a;
+    bottom: 50px;
+  }
+
+      .companies {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 2px solid #DBDBDB;
+        border-bottom: 2px solid #DBDBDB;
+      }
+
+      .individual {
+        display: inline-block;
+        margin: -3px 24px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .individual a:hover {
+        .individual .description {
+          visibility: visible;
+        }
+      }
+
+      a:hover, a:active, a:visited, a:focus { text-decoration: none; color: #282828;}
+
+      .text-content h1, .text-content h2, .text-content h3 {
+        font-weight: 500;
+        font-size: 54px;
+        margin-top: 60px;
+        margin-bottom: 34px;
+      }
+      .text-content h1 {
+        text-align: left;
+        margin-left: 90px;
+        margin-bottom: 16px;
+      }
+      .text-content h2 {
+        text-align: right;
+        margin-right: 90px;
+        margin-bottom: 16px;
+      }
+      .text-content h3 {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .text-content h4 {
+        margin-left: 64px;
+        font-size: 20px;
+      }
+
+      .clients .text-content i:parent:parent {
+        text-align: center;
+        margin: auto;
+        font-style: normal;
+      }
+
+      .text-content {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: #282828;
+      }
+
+      hr {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 0;
+        border-bottom: 1px solid #dbdbdb;
+      }
+
+      .clients {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 50px;
+      }
+      .text-content {
+        padding: 0;
+      }
+      .clients .title {
+        text-align: center;
+        padding: 30px 45px 30px 45px;
+        border-bottom: 1px solid #DBDBDB;
+      }
+      .clients p {
+        font-size: 19px;
+        margin: 0 50px 25px 50px;
+        text-align: justify;
+        line-height: 24px;
+      }
+      .clients p:last-child {
+        margin-bottom: 0;
+      }
+      .clients b {
+        line-height: 18px;
+      }
+
+      .clients .text-content ul, .clients .text-content ol {
+        font-size: 17px;
+        margin: 0 66px 25px 40px;
+        padding-left: 32px;
+        color: #282828;
+        text-align: justify;
+      }
+      .clients .text-content li {
+        margin-top: 24px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        .clients {
+          margin-left: 90px;
+          margin-right: 90px;
+        }
+        .text-content {
+          padding: 30px 20px 32px 20px;
+        }
+        .clients .title {
+          padding: 24px 35px 24px 35px;
+        }
+        .clients .title h1 {
+          font-size: 46px;
+        }
+      }
+
+      @media only screen and (max-width: 680px) {
+        .clients {
+          margin-left: 70px;
+          margin-right: 70px;
+        }
+        .text-content {
+          padding: 20px 0 20px 0;
+        }
+        .clients .title {
+          padding: 16px 20px 16px 20px;
+        }
+        .clients .title h1 {
+          font-size: 38px;
+        }
+      }
+
+      @media only screen and (max-width: 460px) {
+        .clients .title h1 {
+          font-size: 32px;
+        }
+        .clients p {
+          font-size: 15px;
+        }
+      }
+
+{% endblock content_css %}

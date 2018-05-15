@@ -1,0 +1,339 @@
+title = "Semantic Arts"
+description = "The authoratative source for resource computing information."
+theme = "sa"
+#base_url = "http://test.www.semanticarts.com"
+base_url = "http://localhost:1111"
+#generate_categories_pages = false
+#generate_tags_pages = true
+#generate_rss = true
+#highlight_code = true
+#compile_sass = true
+
+[extra]
+  author = 'Randolph Stuart Kahle, Neil Graham'
+  sa_theme = ''
+
+[extra.img]
+  url = "http://aaa"
+  width = 200
+  height = 200
+
+[[extra.person]]
+  id = "dave_mccomb"
+  name = "Dave McComb"
+  position = "President"
+  bio = "President of Semantic Arts, Dave has been successfully leading software development, planning, and review projects for nearly 30 years. He has worked with dozens of clients and dozens of technical environments, including those during his time with Andersen Consulting, that have led to a much broader understanding of what is needed to grow a productive environment. Dave is our application and project management specialist."
+    url = 'dave-mccomb'
+    resume_url = "https://www.semanticarts.com/wp-content/uploads/resumes/DaveMcComb_resume.pdf"
+
+[[extra.person]]
+  id = "michael_uschold"
+  name = "Michael Uschold"
+  position = "Data Architect"
+  bio = 'Michael Uschold is an internationally recognized expert with over two decades experience in developing and transitioning semantic technology from academia to industry. He received his Ph.D. in AI from Edinburgh University in 1991 and an MSc. from Rutgers University in Computer Science in 1982. He pioneered the field of ontology engineering, co-authoring the first paper and giving the first tutorial on the topic in 1995 (in London). This leveraged the work he did in creating the influential "Enterprise Ontology".    Michael is a senior ontology consultant at Semantic Arts, training and guiding clients to better understand and leverage semantic technology while he builds their commercial enterprise ontologies.'
+    url = "michael-uschold"
+    resume_url = "https://www.semanticarts.com/wp-content/uploads/resumes/MichaelUschold_resume.pdf"
+    github_url = "https://github.com/uscholdm"
+
+[[extra.person]]
+  id = "dan_carey"
+  name = "Dan Carey"
+  position = "Data Architect"
+  bio = "Dan is an ontologist and data architect with 30 years of consulting experience, 25 of it designing databases, data models, and data strategies with major IT service and consulting firms. With Semantic Arts, he develops and implements modular ontologies for large firms, primarily in the financial industry. In his prior work, he supported mostly government clients at the federal, state, and url levels. He holds a bachelor's degree in Applied Physics from Georgia Tech."
+    url = "dan-carey"
+    github_url = "https://github.com/DanCarey404"
+
+[[extra.person]]
+  id = "randolph_kahle"
+  name = "Randolph Kahle"
+  position = "Data Architect"
+  bio = "Randolph Kahle has over 40 years of experience in the information technology industry. A graduate of Rice University (BA in MathScience) and Dartmouth's Tuck School of Management (MBA), he has held positions at Microsoft, Hewlett-Packard, GTE Sylvania, MageLang Institute, and his own consulting company before joining Semantic Arts. Randolph continues to follow his passion for semantically-defined systems.    His focus for the last fifteen years has been highly scaled REST-based system design, implementation, and deployment. He is a Google-certified Cloud Architect and teaches and trains on the full Google Cloud Platform."
+    url = 'randolph-kahle'
+    github_url = "https://github.com/RandolphKahle"
+
+[[extra.person]]
+  id = "mark_ouska"
+  name = "Mark Ouska"
+  position = "Data Architect"
+  bio = "Mark is a data architect and ontologist with over 30 years of enterprise information management experience in Fortune 100 companies, major state government agencies, and smaller enterprises maturing across the billion-dollar revenue threshold. He is a seasoned data strategy expert focused on driving business value through data leadership and enterprise information strategy development.    Mark’s industry experience includes Pharmaceutical Research, Retail, Health Care, Banking, Financial Services, Consulting, Criminal Justice, Government Regulatory Agencies, Insurance, Natural Resources, Petrochemicals, and Software Development. He holds a bachelor’s degree in Technology Assimilation from Metropolitan State University in Minnesota."
+    url = 'mark-ouska'
+    github_url = "https://github.com/ouskam"
+
+[[extra.person]]
+  id = "mark_wallace"
+  name = "Mark Wallace"
+  position = "Data Architect"
+  bio = "Mark is an ontologist and software architect/developer with over 30 years of experience designing and building software and data-centric systems for government and commercial clients. He got into the Semantic Web in 2004, and his experience ranges from pure ontology development to large scale RDF applications with billions of triples. Mark has been an author and invited speaker in the Semantic Web community since 2009. With Semantic Arts, Mark gets to apply a broad range of skills including ontology modeling, software development, and project management. Mark holds a Bachelor's degree in Computer Science from the University of Central Florida. Go Knights!"
+    url = 'mark-wallace'
+    github_url = "https://github.com/marksem"
+
+[[extra.person]]
+  id = "melissa_mitchell"
+  name = "Melissa Mitchell"
+  position = "Office Manager"
+  bio = "Melissa joined Semantic Arts in summer 2015 as the corporate office’s Chaos Mitigator (a.k.a., Office Manager). Before joining the team, Melissa spent the previous 10 years writing creatively for url periodicals and technically (with a creative twist) for corporate entities. She earned her BA in English, Creative Writing from Colorado State University in May of 2005 and continues to write in her free time. For Semantic Arts, Melissa dedicates her skills to keeping projects on track and on budget, fine tuning our communications, and maintaining general order and conformity within the ranks."
+    url = "melissa-mitchell"
+
+[[extra.person]]
+  id   = "neil_graham"
+  name = "Neil Graham"
+  bio = "Neil moved from New Jersey to the city of Fort Collins independently at the age of 19. At an earlier age, his older brother would instill in him a long-standing curiosity for the subject of Physics, as well as a deep understanding of computer hardware and software. After one full year of college in New Jersey, Neil made the decision to not return to college, yearning to learn once again as an autodidact. After 6 months of living in "
+  position = "Software Developer"
+    url = 'neil-graham'
+    linkedin_url = "https://www.linkedin.com/in/grahamneiln/"
+    github_url = "https://github.com/NeilGraham"
+
+[[extra.blog]]
+	url = "tale-of-two-projects"
+	title = "A Tale of Two Projects"
+	description = "A Tale of Two Projects, excerpt from \"Software Wasteland: How the Application-Centric Mindset is Hobbling Our Enterprises\""
+	date = 2018-02-28
+	author_id = "dave_mccomb"
+	datestr = "Feb. 28th, 2018"
+	readtime = "4"
+
+[[extra.blog]]
+	url = "software-wasteland"
+	title = "Software Wasteland"
+	description = "Overview of Dave McComb's book, \"Software Wasteland: How the Application-Centric Mindset is Hobbling Our Enterprises\""
+	date = 2018-02-22
+	author_id = "dave_mccomb"
+	datestr = "Feb. 22nd, 2018"
+	readtime = "0.5"
+
+[[extra.blog]]
+	url = "ontology-based-applications"
+	title = "Ontology-Based Applications"
+	description = "Excerpt from Michael Uschold's upcoming book, \"Demystifying OWL for the Enterprise\""
+	date = 2017-12-27
+	author_id = "michael_uschold"
+	datestr = "Nov. 27th, 2017"
+	readtime = "3.5"
+
+[[extra.blog]]
+	url = "semantic-silos"
+	title = "Enterprise Ontology, Semantic Silos, and Cowpaths"
+	description = "Use an enterprise ontology to avoid the trap of paving over your siloed information systems with semantic technology"
+	date = 2017-07-12
+	author_id = "michael_uschold"
+	datestr = "July 12th, 2017"
+	readtime = "3.5"
+
+[[extra.blog]]
+	url = "semantic-bank"
+	title = "A Semantic Bank"
+	description = "Our take on what it would mean to be a \"Semantic Bank\"."
+	date = 2017-05-25
+	author_id = "dave_mccomb"
+	datestr = "May 25th, 2017"
+	readtime = "8"
+
+
+[[extra.companies]]
+  name = "Investment Bank"
+  id = "investment-bank"
+  image_url = "investmentbank.svg"
+
+[[extra.companies]]
+  name = "Procter & Gamble"
+  id = "procter-gamble"
+  image_url = "p&g.svg"
+  title_url = "p&g-title.png"
+
+[[extra.companies]]
+  name = "Financial Service's Back Office Outstanding Firm"
+  id = "fs-back-office-of"
+  image_url = "fsboof.png"
+
+[[extra.companies]]
+  name = "Washington State Secretary of State"
+  id = "ws-sos"
+  image_url = "ws-sos.png"
+
+[[extra.companies]]
+  name = "Washington State Department of Labor & Industries"
+  id = "ws-doli"
+  image_url = "ws-doli.png"
+
+[[extra.companies]]
+  name = "Sentara Healthcare"
+  id = "sentara-healthcare"
+  image_url = "sentara.svg"
+
+[[extra.companies]]
+  name = "Carlei Wines"
+  id = "carlei-wines"
+  image_url = "carlei.png"
+
+[[extra.companies]]
+  name = "LexisNexis"
+  id = "lexisnexis"
+  image_url = "lexisnexis.png"
+
+[[extra.companies]]
+  name = "Washington State Office of Financial Management"
+  id = "ws-ofm"
+  image_url = "ws-ofm.png"
+
+[[extra.companies]]
+  name = "Teacher Retirement System of Texas"
+  id = "trs-texas"
+  image_url = "trs.png"
+
+[[extra.companies]]
+  name = "Sallie Mae"
+  id = "sallie-mae"
+  image_url = "salliemae.svg"
+
+[[extra.companies]]
+  name = "Colorado Child Support Enforcement"
+  id = "co-cse"
+  image_url = "co-cse.svg"
+
+[[extra.companies]]
+  name = "Stone River"
+  id = "stone-river"
+  image_url = "stoneriver.svg"
+
+[[extra.companies]]
+  name = "Washington State Employment Security Division"
+  id = "ws-esd"
+  image_url = "ws-esd.svg"
+
+[[extra.companies]]
+  name = "Washington State Department of Transportation"
+  id = "ws-dot"
+  image_url = "ws-dot.svg"
+
+[[extra.companies]]
+  name = "CIA"
+  id = "cia"
+  image_url = "cia.svg"
+
+[[extra.companies]]
+  name = "International Surface Preparation Corporation"
+  id = "int-surface-prep"
+  image_url = "isp.svg"
+
+[[extra.companies]]
+  name = "Harvard Pilgrim Health Care"
+  id = "harvard-pilgrim-hc"
+  image_url = "harvardpilgrim.png"
+
+[[extra.companies]]
+  name = "Freddie Mac"
+  id = "freddie-mac"
+  image_url = "freddiemac.svg"
+
+[[extra.companies]]
+  name = "Commerce One"
+  id = "commerce-one"
+  image_url = "commerceone.svg"
+
+[[extra.companies]]
+  name = "Imerys Filtration"
+  id = "imerys-filtration"
+  image_url = "imerys.png"
+
+
+[[extra.subjects]]
+  id = 'ontology'
+  name = 'Semantics and Ontology'
+  color = '#1A1A1A'
+
+[[extra.subjects]]
+  id = 'development'
+  name = 'Development'
+  color = '#1A1A1A'
+
+[[extra.subjects]]
+  id = 'architecture'
+  name = 'Software Architecture'
+  color = '#1A1A1A'
+
+
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/AvoidingPropertyProliferation012717.pdf"
+	title = "Avoiding Property Proliferation"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "Domain and range for ontological properties are not about data integrity, but logical necessity. Misusing them leads to an inelegant (and unnecessary) proliferation of properties."
+	date = 2017-01-27
+	author_id = "dan_carey"
+	datestr = "Jan. 27th, 2017"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/QuantumEntanglementInverseProps041516MFUnewtemplate.pdf"
+	title = "Quantum Entanglement, Flipping Out and Inverse Properties"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "We take a deep dive into the pragmatic issues regarding the use of inverse properties when creating OWL ontologies."
+	date = 2016-04-15
+	author_id = "michael_uschold"
+	datestr = "Apr. 4th, 2016"
+
+[[extra.articles]]
+	url = "binary-instances"
+	title = "Binary Instances"
+  type = "Post"
+  subject_id = "ontology"
+	description = "Sometimes when we’re designing ontologies we’re faced with design choices that would lead us to create what we call \"binary instances\" or a situation where it will take the instantiation of two instances (often of different classes) in order to capture one concept."
+	date = 2015-07-17
+	author_id = "dave_mccomb"
+	datestr = "July 17th, 2015"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/HowLongShouldYourURIsBeDMc060815newtemplate.pdf"
+	title = "How long should your URIs be?"
+  type = "Whitepaper"
+  subject_id = "development"
+	description = "This applies to URIs that a system needs to generate when it finds it needs to mint a new resource"
+	date = 2015-06-08
+	author_id = "dave_mccomb"
+	datestr = "June 8th, 2015"
+
+[[extra.articles]]
+	pdf_url = "https://semanticarts.com/wp-content/White%20Papers/CategoriesandClassesDMc060515newtemplate.pdf"
+	title = "Categories and Classes"
+  type = "Whitepaper"
+  subject_id = "ontology"
+	description = "Getting the category/class distinction right is one of the key drivers of the cost of traditional systems."
+	date = 2015-06-05
+	author_id = "dave_mccomb"
+	datestr = "June 5th, 2015"
+
+[[extra.books]]
+	url = "software-wasteland"
+	title = "Software Wasteland"
+  subtitle = "How the Application-Centric Mindset is Hobbling our Enterprises"
+	description = ""
+	date = 2018-01-31
+	img_id = "software-wasteland.png"
+	author_id = "dave_mccomb"
+	datestr = "Jan. 31st, 2018"
+  amazon_url = "https://www.amazon.com/Software-Wasteland-Application-Centric-Hobbling-Enterprises-ebook/dp/B079KJ8VNL"
+	safari_url = "https://www.safaribooksonline.com/library/view/software-wasteland-how/9781634623186/"
+	has_shadow = ""
+
+[[extra.books]]
+	url = "business-systems"
+	title = "Semantics in Business Systems"
+  subtitle = "The Savvy Manager's Guide"
+	description = ""
+	date = 2018-01-31
+	img_id = "business-systems.jpg"
+	author_id = "dave_mccomb"
+	datestr = "Sept. 24th, 2003"
+  amazon_url = "https://www.amazon.com/Semantics-Business-Systems-Managers-Guides/dp/1558609172"
+	has_shadow = ""
+
+[[extra.books]]
+	url = "demystifying-owl"
+	title = "Demystifying OWL"
+  subtitle = "for the Enterprise"
+	description = ""
+	img_id = "demystifying-owl.png"
+	author_id = "michael_uschold"
+	datestr = "Coming Soon"
+

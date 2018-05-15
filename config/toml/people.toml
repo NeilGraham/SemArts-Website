@@ -1,0 +1,64 @@
+[[extra.person]]
+  id = "dave_mccomb"
+  name = "Dave McComb"
+  position = "President"
+  bio = "President of Semantic Arts, Dave has been successfully leading software development, planning, and review projects for nearly 30 years. He has worked with dozens of clients and dozens of technical environments, including those during his time with Andersen Consulting, that have led to a much broader understanding of what is needed to grow a productive environment. Dave is our application and project management specialist."
+    url = 'dave-mccomb'
+    resume_url = "https://www.semanticarts.com/wp-content/uploads/resumes/DaveMcComb_resume.pdf"
+
+[[extra.person]]
+  id = "michael_uschold"
+  name = "Michael Uschold"
+  position = "Data Architect"
+  bio = 'Michael Uschold is an internationally recognized expert with over two decades experience in developing and transitioning semantic technology from academia to industry. He received his Ph.D. in AI from Edinburgh University in 1991 and an MSc. from Rutgers University in Computer Science in 1982. He pioneered the field of ontology engineering, co-authoring the first paper and giving the first tutorial on the topic in 1995 (in London). This leveraged the work he did in creating the influential "Enterprise Ontology".    Michael is a senior ontology consultant at Semantic Arts, training and guiding clients to better understand and leverage semantic technology while he builds their commercial enterprise ontologies.'
+    url = "michael-uschold"
+    resume_url = "https://www.semanticarts.com/wp-content/uploads/resumes/MichaelUschold_resume.pdf"
+    github_url = "https://github.com/uscholdm"
+
+[[extra.person]]
+  id = "dan_carey"
+  name = "Dan Carey"
+  position = "Data Architect"
+  bio = "Dan is an ontologist and data architect with 30 years of consulting experience, 25 of it designing databases, data models, and data strategies with major IT service and consulting firms. With Semantic Arts, he develops and implements modular ontologies for large firms, primarily in the financial industry. In his prior work, he supported mostly government clients at the federal, state, and url levels. He holds a bachelor's degree in Applied Physics from Georgia Tech."
+    url = "dan-carey"
+    github_url = "https://github.com/DanCarey404"
+
+[[extra.person]]
+  id = "randolph_kahle"
+  name = "Randolph Kahle"
+  position = "Data Architect"
+  bio = "Randolph Kahle has over 40 years of experience in the information technology industry. A graduate of Rice University (BA in MathScience) and Dartmouth's Tuck School of Management (MBA), he has held positions at Microsoft, Hewlett-Packard, GTE Sylvania, MageLang Institute, and his own consulting company before joining Semantic Arts. Randolph continues to follow his passion for semantically-defined systems.    His focus for the last fifteen years has been highly scaled REST-based system design, implementation, and deployment. He is a Google-certified Cloud Architect and teaches and trains on the full Google Cloud Platform."
+    url = 'randolph-kahle'
+    github_url = "https://github.com/RandolphKahle"
+
+[[extra.person]]
+  id = "mark_ouska"
+  name = "Mark Ouska"
+  position = "Data Architect"
+  bio = "Mark is a data architect and ontologist with over 30 years of enterprise information management experience in Fortune 100 companies, major state government agencies, and smaller enterprises maturing across the billion-dollar revenue threshold. He is a seasoned data strategy expert focused on driving business value through data leadership and enterprise information strategy development.    Mark’s industry experience includes Pharmaceutical Research, Retail, Health Care, Banking, Financial Services, Consulting, Criminal Justice, Government Regulatory Agencies, Insurance, Natural Resources, Petrochemicals, and Software Development. He holds a bachelor’s degree in Technology Assimilation from Metropolitan State University in Minnesota."
+    url = 'mark-ouska'
+    github_url = "https://github.com/ouskam"
+
+[[extra.person]]
+  id = "mark_wallace"
+  name = "Mark Wallace"
+  position = "Data Architect"
+  bio = "Mark is an ontologist and software architect/developer with over 30 years of experience designing and building software and data-centric systems for government and commercial clients. He got into the Semantic Web in 2004, and his experience ranges from pure ontology development to large scale RDF applications with billions of triples. Mark has been an author and invited speaker in the Semantic Web community since 2009. With Semantic Arts, Mark gets to apply a broad range of skills including ontology modeling, software development, and project management. Mark holds a Bachelor's degree in Computer Science from the University of Central Florida. Go Knights!"
+    url = 'mark-wallace'
+    github_url = "https://github.com/marksem"
+
+[[extra.person]]
+  id = "melissa_mitchell"
+  name = "Melissa Mitchell"
+  position = "Office Manager"
+  bio = "Melissa joined Semantic Arts in summer 2015 as the corporate office’s Chaos Mitigator (a.k.a., Office Manager). Before joining the team, Melissa spent the previous 10 years writing creatively for url periodicals and technically (with a creative twist) for corporate entities. She earned her BA in English, Creative Writing from Colorado State University in May of 2005 and continues to write in her free time. For Semantic Arts, Melissa dedicates her skills to keeping projects on track and on budget, fine tuning our communications, and maintaining general order and conformity within the ranks."
+    url = "melissa-mitchell"
+
+[[extra.person]]
+  id   = "neil_graham"
+  name = "Neil Graham"
+  bio = "Neil moved from New Jersey to the city of Fort Collins independently at the age of 19. At an earlier age, his older brother would instill in him a long-standing curiosity for the subject of Physics, as well as a deep understanding of computer hardware and software. After one full year of college in New Jersey, Neil made the decision to not return to college, yearning to learn once again as an autodidact. After 6 months of living in "
+  position = "Software Developer"
+    url = 'neil-graham'
+    linkedin_url = "https://www.linkedin.com/in/grahamneiln/"
+    github_url = "https://github.com/NeilGraham"
