@@ -34,6 +34,10 @@
 
       {% block content_css %}
 
+      #clearnav {
+        position: absolute;
+      }
+
       .landing-page {
         text-align: center;
         color: #282828;
@@ -79,7 +83,7 @@
       .right {
         background-color: #F4F4F4;
       }
-      
+
 
       @media screen and (min-width: 950px) {
         .landing-page h1 {
@@ -289,7 +293,7 @@
     <div class="content">
 
       {# Fills content area underneath starting navbar position #}
-      <!--<div style="height:47px; display:inline-block;"></div>-->
+      <div id='clearnav' style="height:47px; display:inline-block;"></div>
 
       {% block content %}
       <div class="landing-page">
