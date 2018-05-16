@@ -72,6 +72,7 @@
       }
       .landing-page h2 {
         margin: 0;
+        padding-top: 10vh;
         font-weight: 500;
       }
       .landing-page h3 {
@@ -87,33 +88,47 @@
         background-color: #F4F4F4;
       }
       table {
-        margin: 5vw 25vw 5vw 25vw; /*TRBL*/
+        /*margin: 5vw 5vw 5vw 5vw; /*TRBL*/
       }
       table .left-column{
         text-align: left;
+      }
+      td {
+        padding: 15px;
       }
 
 
       @media screen and (min-width: 1051px) {
         .landing-page h1 {
-          font-size: 6rem;
-          
+          font-size: 5.5rem;          
         }
         .landing-page h2 {
           font-size: 2.5rem;
-          font-weight: 500;
         }
         .landing-page h3 {
           font-size: 2rem;
-          font-weight: 400;
         }
         .landing-page h4 {
           font-size: 1.6rem;
-          font-weight: 400;
+        }
+        .landing-page p {
+          font-size: 1.1rem;
         }
         .landing-page .top .text {
           margin-left: 20vw;
           margin-right: 20vw;
+        }
+        .landing-page .box .text {
+          margin-left: 20vw;
+          margin-right: 20vw;
+        }
+        #datasilo {
+          height: 20vw;
+          width: 20vw;
+        }
+        #datacentric {
+          height: 13.33vw;
+          width: 13.33vw;
         }
       }
 
@@ -134,9 +149,24 @@
           font-size: 1.5rem;
           font-weight: 400;
         }
+        .landing-page p {
+          font-size: 1.0rem;
+        }
         .landing-page .top .text {
           margin-left: 10vw;
           margin-right: 10vw;
+        }
+        .landing-page .box .text {
+          margin-left: 10vw;
+          margin-right: 10vw;
+        }
+        #datasilo {
+          height: 25vw;
+          width: 25vw;
+        }
+        #datacentric {
+          height: 16.67vw;
+          width: 16.67vw;
         }
 
       }
@@ -146,7 +176,7 @@
           font-size: 4rem;
         }
         .landing-page h2 {
-          font-size: 2.5rem;
+          font-size: 2.1rem;
           font-weight: 500;
         }
         .landing-page h3 {
@@ -157,9 +187,24 @@
           font-size: 1.4rem;
           font-weight: 400;
         }
+        .landing-page p {
+          font-size: 0.9rem;
+        }
         .landing-page .top .text {
           margin-left: 5vw;
           margin-right: 5vw;
+        }
+        .landing-page .box .text {
+          margin-left: 5vw;
+          margin-right: 5vw;
+        }
+        #datasilo {
+          height: 30vw;
+          width: 30vw;
+        }
+        #datacentric {
+          height: 20vw;
+          width: 20vw;
         }
 
       }
@@ -169,20 +214,35 @@
           font-size: 3rem;
         }
         .landing-page h2 {
-          font-size: 2.5rem;
+          font-size: 1.9rem;
           font-weight: 500;
         }
         .landing-page h3 {
-          font-size: 1rem;
+          font-size: 1.4rem;
           font-weight: 400;
         }
         .landing-page h4 {
-          font-size: 0.8rem;
+          font-size: 1.0rem;
           font-weight: 400;
+        }
+        .landing-page p {
+          font-size: 0.8rem;
         }
         .landing-page .top .text {
           margin-left: 4vw;
           margin-right: 4vw;
+        }
+        .landing-page .box .text {
+          margin-left: 4vw;
+          margin-right: 4vw;
+        }
+        #datasilo {
+          height: 35vw;
+          width: 35vw;
+        }
+        #datacentric {
+          height: 23.33vw;
+          width: 23.33vw;
         }
 
       }
@@ -196,16 +256,31 @@
           font-weight: 500;
         }
         .landing-page h3 {
-          font-size: 0.8rem;
+          font-size: 1.0rem;
           font-weight: 400;
         }
         .landing-page h4 {
+          font-size: 0.8rem;
+
+        }
+        .landing-page p {
           font-size: 0.6rem;
-          font-weight: 400;
         }
         .landing-page .top .text {
           margin-left: 3vw;
           margin-right: 3vw;
+        }
+        .landing-page .box .text {
+          margin-left: 3vw;
+          margin-right: 3vw;
+        }
+        #datasilo {
+          height: 40vw;
+          width: 40vw;
+        }
+        #datacentric {
+          height: 26.67vw;
+          width: 26.67vw;
         }
       }
 
@@ -375,27 +450,27 @@
         </div>
         <div class="box right">
           <div class="text">
-            <h2>DATA-CENTRIC TRANSFORMATION</h1>
+            <h2>DATA-CENTRIC TRANSFORMATION</h2>
             <h3>
               A single database for storing and utilizing all of your data.
             </h3> 
-            <table class="grid-container">
+            <table>
               <tr>
                 <td class="left-column">
                   <h3>Data Silos</h3>
-                  <p>Some description</p>
+                  <p>A data repository isolated to an organizational unit. They impede organizational productivity and have a negative influence on data integrity.</p>
                 </td>
                 <td class="right-column">
-                  <img src="/images/datasilo.svg" height=300px width=300px></img>
+                  <img src="/images/datasilo.svg" id="datasilo"></img>
                 </td>
               </tr>
               <tr>
                 <td class="left-column">
                   <h3>Data-Centric Architecture</h3>
-                  <p>The consolidation of your data into a single format makes your data more versatile</p>
+                  <p>The consolidation of your data into a single format. Here, the data is the primary and permanent asset, and applications are transient.</p>
                 </td>
                 <td class="right-column">
-                  <img src="/images/datacentric.svg" height=200px width=200px></img>
+                  <img src="/images/datacentric.svg" id="datacentric"></img>
                   <h5>LESS MEANS MORE</h5>
                 </td>
               </tr>              

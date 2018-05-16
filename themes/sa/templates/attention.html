@@ -26,28 +26,28 @@
       .text-content h1, .text-content h2, .text-content h3 {
         font-weight: 500;
         font-size: 54px;
-        margin-top: 60px;
-        margin-bottom: 34px;
+        /*<!-- margin-top: 60px;*/
+        /*margin-bottom: 34px; -->*/
       }
       .text-content h1 {
         text-align: left;
-        margin-left: 90px
+        /*<!-- margin-left: 90px -->*/
       }
       .text-content h2 {
         text-align: right;
-        margin-right: 90px;
+        /*<!-- margin-right: 90px; -->*/
       }
       .text-content h3 {
         text-align: center;
       }
       .text-content h4 {
-        margin-left: 64px;
+        /*<!-- margin-left: 64px; -->*/
         font-size: 20px;
       }
 
       .attention .text-content i:parent:parent {
         text-align: center;
-        margin: auto;
+        /*<!-- margin: auto; -->*/
         font-style: normal;
       }
 
@@ -67,21 +67,22 @@
 
       .attention {
         max-width: 800px;
-        margin: auto;
-        margin-top: 0;
-        margin-bottom: 50px;
+        /*<!-- margin: auto; -->*/
+        /*<!-- margin-top: 0; -->*/
+        /*margin: 0vw 25vw 0vw 25vw;*/ /*TRBL*/
+        /*margin-bottom: 50px;*/
       }
       .text-content {
         padding: 0 0 55px 0;
       }
       .attention .title {
         text-align: center;
-        padding: 30px 45px 30px 45px;
+        /*padding: 30px 45px 30px 45px;*/
         border-bottom: 1px solid #DBDBDB;
       }
       .attention p {
         font-size: 19px;
-        margin: 0 50px 25px 50px;
+        /*margin: 0 50px 25px 50px;*/
         text-align: justify;
         line-height: 24px;
       }
@@ -94,7 +95,7 @@
 
       .attention .text-content ul, .attention .text-content ol {
         font-size: 17px;
-        margin: 0 66px 25px 40px;
+        /*margin: 0 66px 25px 40px;*/
         padding-left: 32px;
         color: #282828;
         text-align: justify;
@@ -107,14 +108,46 @@
         display: block;
         position: relative;
         text-align: center;
-        margin: 40px 40px 40px 40px;
+        /*margin: 40px 40px 40px 40px;*/
         width: 100%;
+      }
+
+      @media screen and (min-width: 1051px) {
+        .attention {
+          margin: 0vw 20vw 0vw 20vw;
+        }
+      }
+
+
+      @media screen and (min-width: 657px) and (max-width: 1051px) {
+        .attention {
+          margin: 0vw 15vw 0vw 15vw;
+        }
+      }
+
+      @media screen and (min-width: 468px) and (max-width: 657px) {
+        .attention {
+          margin: 0vw 10vw 0vw 10vw;
+        }
+      }
+
+      @media screen and (min-width: 343px) and (max-width: 468px) {
+        .attention {
+          margin: 0vw 5vw 0vw 5vw;
+        }
+
+      }
+
+      @media screen and (max-width: 343px) {
+        .attention {
+          margin: 0vw 4vw 0vw 4vw;
+        }
       }
 
       @media only screen and (max-width: 900px) {
         .attention {
-          margin-left: 90px;
-          margin-right: 90px;
+          /*margin-left: 90px;*/
+          /*margin-right: 90px;*/
         }
         .text-content {
           padding: 30px 20px 32px 20px;
@@ -129,8 +162,8 @@
 
       @media only screen and (max-width: 680px) {
         .attention {
-          margin-left: 70px;
-          margin-right: 70px;
+          /*margin-left: 70px;*/
+          /*margin-right: 70px;*/
         }
         .text-content {
           padding: 20px 0 20px 0;
